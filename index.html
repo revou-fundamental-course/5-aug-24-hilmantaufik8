@@ -1,72 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <header></header>
-        <h1 class="main-title"> Kalkulator BMI</h1>
+    <header>
+        <h1 class="main-title">Kalkulator BMI</h1>
+    </header>
+    
+    <main class="content">
 
-    <main>
-        <aside>
-            <article>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <!-----------------------------------------  LEFT FLEX    ---------------------------------------------->
+        <aside class="calculator-container">
+            <article class="description">
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
             </article>
     
-            <form>
+    <!-----------------------------------------  Form Pengisian Data    -------------------------------->
+            <form id="bmi-form" class="bmi-form">
                 <div>
-                    <h3>Jenis Kelamin</h3>
+                    <h3>Jenis Kelamin</h3> <!--Form jenis kelamin-->
                     <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">Laki-laki</label>
                     <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label for="perempuan">Perempuan</label>
-                </div>
     
-                <div>
-                    <h3>Berat Badan</h3>
-                    <input type="number">
-                </div>
+                    <div class="form-group"> <!--Form berat badan (wajib diisi dengan angka)-->
+                        <label for="berat">Berat Badan (kg)</label>
+                        <div class="input-icon">
+                            <i class="fas fa-pen"></i> <!--tambah style pena-->
+                            <input type="number" id="berat" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group"> <!--Form usia (wajib diisi dengan angka)-->
+                        <label for="usia">Usia (tahun)</label>
+                        <div class="input-icon">
+                            <i class="fas fa-pen"></i> <!--tambah style pena-->
+                            <input type="number" id="usia" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group"> <!--Form tinggi badan (wajib diisi dengan angka)-->
+                        <label for="tinggi">Tinggi Badan (cm)</label>
+                        <div class="input-icon">
+                            <i class="fas fa-pen"></i> <!--tambah style pena-->
+                            <input type="number" id="tinggi" required>
+                        </div>
+                    </div>
     
-                <div>
-                    <h3>Usia</h3>
-                    <input type="number">
-                </div>
-     
-                <div>
-                    <h3>Tinggi Badan</h3>
-                    <input type="number">
-                </div>
-    
-                <div>
-                    <button class="button">Hitung BMI</button>
-                    <button class="reset">Reset</button>
+                <div class="button-group"> <!--Fungsi tombol-tombol-->
+                    <button type="submit" class="btn hitung">Hitung BMI</button>
+                    <button type="button" class="btn reset">Reset</button>
                 </div>
             </form>
+    <!-----------------------------------------  Akhir Form Pengisian    -------------------------------->
     
-            <article>
+    <!-----------------------------------------  Penjelasan Fitur    ------------------------------------>
+            <article class="features"> <!--informasi tambahan-->
                 <header>
                     <h2>Keunggulan Fitur</h2>
                 </header>
-    
-                <p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                </p>
+                <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+                <p class="note">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+                <p class="note">Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M2.</p>
             </article>
+    <!-----------------------------------------  Akhir Penjelasan Fitur    ------------------------------------>
         </aside>
-        
+    <!-----------------------------------------  Akhir LEFT FLEX    ------------------------------------>
 
-        <aside>
-            <section>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </section>
+
+
+
+    <!-----------------------------------------  RIGHT FLEX    --------------------------------------------->
+        <aside class="result-container">
+            <div id="result" class="result">
+                <!-- Hasil perhitungan BMI akan ditampilkan di sini -->
+            </div>
+            <p class="disclaimer">
+                BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+            </p>
         </aside>
-
+    <!-----------------------------------------  END RIGHT FLEX    --------------------------------------------->
     </main>
 
     <footer></footer>
-    
+    <script src="js/script.js"></script>
 </body>
-
 </html>

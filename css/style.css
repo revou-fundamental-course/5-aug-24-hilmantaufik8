@@ -1,31 +1,214 @@
-/* Ini CSS */
+body { /* Style halaman, font, background, dan sebagainya */
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
 
-.main-title {
+header { /*Style judul*/
+    background-color: #cbe4ff;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
     text-align: center;
 }
 
-main{
-    display :flex;
-}
-form {
-    padding: 12px;
-    background-color: aliceblue;
+.main-title { /*Style judul*/
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
 }
 
-aside {
-    padding: 48px;
+.content { /*Style keseluruhan konten yaitu flex menjadi 2 kolom dengan padding*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
 }
 
-.button {
-    height: 20px;
-    background-color: lightblue;
-    border: 0;
-    border-radius: 4px;
+.calculator-container { /*Style flex kolom sebelah kiri untuk penghitungan*/
+    width: 50%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
 }
 
-.reset {
-    height: 20px;
-    background-color: rgb(255, 255, 255);
-    border: 0;
-    border-radius: 4px;
+.description, .features {
+    margin-bottom: 20px;
+}
+
+.bmi-form .input-group {
+    margin-bottom: 15px;
+}
+
+.input-group h3 { /*Style isian jenis kelamin*/
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+.input-group input[type="number"], 
+.input-group input[type="radio"] + label { /*Style radio jenis kelamin*/
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* General styling for input fields */
+.form-group {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Style for the label */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-icon { /*Style ikon*/
+    position: relative;
+    margin-top: 10px;
+}
+
+.input-icon i { /*Style ikon pena*/
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555; 
+}
+
+.input-icon input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; 
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-icon input:focus {
+    border-color: #00bfa5;
+}
+/* End general styling for input fields */
+
+.button-group { /*Style flex kolom untuk tombol hitung dan reset*/
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.btn { /*Style dan interaksi tombol*/
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+}
+
+.hitung { /*Style tombol Hitung BMI*/
+    background-color: #28a745;
+}
+
+.reset { /*Style tombol reset*/
+    background-color: #dc3545;
+}
+
+
+.result-container { /*Style flex kolom sebelah kanan untuk hasil hitungan*/
+    width: 40%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result { /*Style hasil hitungan dan kategori*/
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+#result p.advice { /*Style saran*/
+    font-size: 16px;
+    color: #555;
+    font-style: italic;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #00bfa5; /* border untuk saran */
+    line-height: 1.2;
+}
+
+.disclaimer { 
+    color: #555;
+    font-size: 0.9em;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+@media (max-width: 768px) { /*Style kompabilitas di berbagai media*/
+    body {
+        padding: 0;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .calculator-container, .result-container {
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 15px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .main-title {
+        font-size: 1.5em;
+    }
+
+    .input-group input[type="number"], 
+    .input-group input[type="radio"] + label {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 12px 0;
+    }
+
+    .result {
+        font-size: 1.2em;
+    }
+
+    .disclaimer, .note {
+        font-size: 0.85em;
+    }
 }
